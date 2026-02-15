@@ -7,8 +7,16 @@ interface INavbarProps {
 
 const Navbar = ({ logo, title }: INavbarProps) => {
     const [mobileMenu, setMobileMenu] = React.useState(false);
+
+    const triggerMobileNavItem = (id: string) => {
+      setMobileMenu(false);
+      const element = document.querySelector(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
       <>
+        {/* Desktop View for App bar */}
         <div className="container flex items-center justify-between">
           <div>
             <a href="/">
@@ -20,7 +28,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerMobileNavItem('#about')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -28,7 +36,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerMobileNavItem('#services')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -36,7 +44,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth', })}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -90,6 +98,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
             </button>
           </div>
         </div>
+        {/* End of Desktop View for App bar */}
 
         {/* Mobile View for App bar */}
         <div
@@ -103,14 +112,14 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerMobileNavItem('#about')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About Mobile</span>
 
               </li>
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerMobileNavItem('#services')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
 
               </li>
