@@ -34,6 +34,7 @@ const Layout = ({ children }: ILayout) => {
                         {children}
                     </div>
                 </div>
+                <Footer />
             </div>
         
     );
