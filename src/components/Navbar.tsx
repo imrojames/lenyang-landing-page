@@ -89,7 +89,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
               <li className="py-2">
 
                 <span onClick={() => triggerNavItem('#about')}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About Mobile</span>
+                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
 
               </li>
 
