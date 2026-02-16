@@ -30,10 +30,11 @@ const Layout = ({ children }: ILayout) => {
                         <Navbar logo={icon} title={title} />
                     </div>
 
-                    <div>
+                    <div className="testClass">
                         {children}
                     </div>
                 </div>
+                <Footer />
             </div>
         
     );

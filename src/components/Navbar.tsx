@@ -7,8 +7,16 @@ interface INavbarProps {
 
 const Navbar = ({ logo, title }: INavbarProps) => {
     const [mobileMenu, setMobileMenu] = React.useState(false);
+
+    const triggerNavItem = (id: string) => {
+      setMobileMenu(false);
+      const element = document.querySelector(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+
     return (
       <>
+        {/* Desktop View for App bar */}
         <div className="container flex items-center justify-between">
           <div>
             <a href="/">
@@ -20,7 +28,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#about')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -28,7 +36,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#services')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -36,7 +44,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#portfolio')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -44,15 +52,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Clients</span>
-
-                <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
-              </li>
-
-              <li className="group pl-6">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#experience')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Work</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -60,23 +60,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="group pl-6">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Statistics</span>
-
-                <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
-              </li>
-
-              <li className="group pl-6">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Blog</span>
-
-                <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
-              </li>
-
-              <li className="group pl-6">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#contact')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contact</span>
 
                 <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
@@ -90,6 +74,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
             </button>
           </div>
         </div>
+        {/* End of Desktop View for App bar */}
 
         {/* Mobile View for App bar */}
         <div
@@ -103,56 +88,36 @@ const Navbar = ({ logo, title }: INavbarProps) => {
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#about')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">About Mobile</span>
 
               </li>
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#services')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Services</span>
 
               </li>
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#portfolio')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Portfolio</span>
 
               </li>
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Clients</span>
-
-              </li>
-
-              <li className="py-2">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#experience')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Work</span>
 
               </li>
 
-              <li className="py-2">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Statistics</span>
-
-              </li>
 
               <li className="py-2">
 
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Blog</span>
-
-              </li>
-
-              <li className="py-2">
-
-                <span onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <span onClick={() => triggerNavItem('#contact')}
                   className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white">Contact</span>
 
               </li>
