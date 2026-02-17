@@ -20,7 +20,7 @@ const Home = ({ name, profileImage, backgroundImage }: IHomeProps) => {
               </div>
               <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
-                  Hello I'm {name || "Lenny Rose"}!
+                  Hello I'm {name}!
                 </h1>
                 <div className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
                   <div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
@@ -60,7 +60,7 @@ const Home = ({ name, profileImage, backgroundImage }: IHomeProps) => {
                 Who am I?
               </h2>
               <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                I'm Christy Smith, a Web Designer & Photographer
+                I'm {name}, a Web Designer & Photographer
               </h4>
               <p className="pt-6 font-body leading-relaxed text-grey-20">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
