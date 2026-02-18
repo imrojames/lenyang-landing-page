@@ -13,16 +13,16 @@ const Portfolio = () => {
 
           <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
             <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img src="/assets/img/portfolio-apple.jpeg" className="w-full shadow" alt="portfolio image" />
+              <img src="./assets/img/portfolio-apple.jpeg" className="w-full shadow" alt="portfolio image" />
             </a>
             <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img src="/assets/img/portfolio-stripe.jpeg" className="w-full shadow" alt="portfolio image" />
+              <img src="./assets/img/portfolio-stripe.jpeg" className="w-full shadow" alt="portfolio image" />
             </a>
             <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img src="/assets/img/portfolio-fedex.jpeg" className="w-full shadow" alt="portfolio image" />
+              <img src="./assets/img/portfolio-fedex.jpeg" className="w-full shadow" alt="portfolio image" />
             </a>
             <a href="/" className="mx-auto transform transition-all hover:scale-105 md:mx-0">
-              <img src="/assets/img/portfolio-microsoft.jpeg" className="w-full shadow" alt="portfolio image" />
+              <img src="./assets/img/portfolio-microsoft.jpeg" className="w-full shadow" alt="portfolio image" />
             </a>
           </div>
         </div>

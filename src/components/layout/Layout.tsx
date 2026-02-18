@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
 import { useLayout } from "../../context/LayoutContext";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -9,8 +8,7 @@ interface ILayout {
 }
 
 const Layout = ({ children }: ILayout) => {
-    const { title, icon, headerContent, footerContent } = useLayout();
-    const [mobileMenu, setMobileMenu] = useState(false);
+    const { title, icon} = useLayout();
 
     return (
         

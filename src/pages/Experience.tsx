@@ -15,7 +15,7 @@ const Experience = () => {
               <div className="md:w-2/5">
                 <div className="flex justify-center md:justify-start">
                   <span className="shrink-0">
-                    <img src="/assets/img/logo-spotify.svg" className="h-auto w-32" alt="company logo" />
+                    <img src="./assets/img/logo-spotify.svg" className="h-auto w-32" alt="company logo" />
                   </span>
                   <div className="relative ml-3 hidden w-full md:block">
                     <span className="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"></span>
@@ -48,7 +48,7 @@ const Experience = () => {
               <div className="md:w-2/5">
                 <div className="flex justify-center md:justify-start">
                   <span className="shrink-0">
-                    <img src="/assets/img/logo-microsoft.svg" className="h-auto w-32" alt="company logo" />
+                    <img src="./assets/img/logo-microsoft.svg" className="h-auto w-32" alt="company logo" />
                   </span>
                   <div className="relative ml-3 hidden w-full md:block">
                     <span className="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"></span>
@@ -81,7 +81,7 @@ const Experience = () => {
               <div className="md:w-2/5">
                 <div className="flex justify-center md:justify-start">
                   <span className="shrink-0">
-                    <img src="/assets/img/logo-fedex.svg" className="h-auto w-32" alt="company logo" />
+                    <img src="./assets/img/logo-fedex.svg" className="h-auto w-32" alt="company logo" />
                   </span>
                   <div className="relative ml-3 hidden w-full md:block">
                     <span className="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"></span>
