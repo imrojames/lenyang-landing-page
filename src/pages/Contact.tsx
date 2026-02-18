@@ -1,3 +1,7 @@
+import Button from "../components/Button";
+import Text from "../components/Text";
+import Textarea from "../components/TextArea";
+
 const Contact = () => {
     return (
         <div className="container py-16 md:py-20" id="contact">
@@ -17,19 +21,28 @@ const Contact = () => {
           </div>
           <form className="mx-auto w-full pt-10 sm:w-3/4">
             <div className="flex flex-col md:flex-row">
-              <input className="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
-                placeholder="Name" type="text" id="name" />
-              <input
-                className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
-                placeholder="Email" type="text" id="email" />
+                <Text 
+                    className="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5 test" 
+                    placeholder="Name" 
+                    type="text"
+                />
+                <Text
+                    className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
+                    placeholder="Email"
+                    type="email" 
+                />
             </div>
-            <textarea className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
-              placeholder="Message" id="message" cols={30} rows={10}></textarea>
-            <button
-              className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20">
-              Send
-              <i className="bx bx-chevron-right relative -right-2 text-3xl"></i>
-            </button>
+            <Textarea 
+                className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
+                placeholder="Message" 
+                cols={30} 
+                rows={10} 
+            />
+            <Button 
+                className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
+                placeholder="Send"
+                element={<i className="bx bx-chevron-right relative -right-2 text-3xl"></i>}
+            />
           </form>
           <div className="flex flex-col pt-16 lg:flex-row">
             <div className="w-full border-l-2 border-t-2 border-r-2 border-b-2 border-grey-60 px-6 py-6 sm:py-8 lg:w-1/3">
