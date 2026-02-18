@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import Text from "../components/Text";
-import Textarea from "../components/TextArea";
+import Textarea from "../components/Textarea";
 
 const Contact = () => {
     return (
