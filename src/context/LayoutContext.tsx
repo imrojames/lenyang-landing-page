@@ -24,12 +24,12 @@ export const useLayout = () => {
 
 export const LayoutProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [title, setTitle] = useState<string>("Default Title");
-    const [icon, setIcon] = useState<string>("/assets/img/logo.svg");
+    const [icon, setIcon] = useState<string>("./assets/img/logo.svg");
     const [headerContent, setHeaderContent] = useState<ReactNode>();
     const [footerContent, setFooterContent] = useState<ReactNode>();
-    const [name, setName] = useState<string>("Lenny Rose");
-    const [profileImage, setProfileImage] = useState<string>("/assets/img/blog-author.jpg");
-    const [backgroundImage, setBackgroundImage] = useState<string>("/assets/img/bg-hero.jpg");
+    // const [name, setName] = useState<string>("Lenny Rose");
+    // const [profileImage, setProfileImage] = useState<string>("/assets/img/blog-author.jpg");
+    // const [backgroundImage, setBackgroundImage] = useState<string>("/assets/img/bg-hero.jpg");
 
     const value = {
         title,

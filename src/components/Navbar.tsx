@@ -5,7 +5,7 @@ interface INavbarProps {
     title?: string;
 }
 
-const Navbar = ({ logo, title }: INavbarProps) => {
+const Navbar = ({ logo}: INavbarProps) => {
     const [mobileMenu, setMobileMenu] = React.useState(false);
 
     const triggerNavItem = (id: string) => {
@@ -20,7 +20,7 @@ const Navbar = ({ logo, title }: INavbarProps) => {
         <div className="container flex items-center justify-between">
           <div>
             <a href="/">
-              <img src={logo || "/assets/img/logo.svg"} className="w-24 lg:w-48" alt="logo image" />
+              <img src={logo || "./assets/img/logo.svg"} className="w-24 lg:w-48" alt="logo image" />
             </a>
           </div>
           <div className="hidden lg:block">

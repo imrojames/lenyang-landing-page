@@ -15,10 +15,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-development-white.svg" alt="development icon" />
+                  <img src="./assets/img/icon-development-white.svg" alt="development icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-development-black.svg" alt="development icon" />
+                  <img src="./assets/img/icon-development-black.svg" alt="development icon" />
                 </div>
               </div>
               <div className="text-center">
@@ -33,10 +33,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-content-white.svg" alt="content marketing icon" />
+                  <img src="./assets/img/icon-content-white.svg" alt="content marketing icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-content-black.svg" alt="content marketing icon" />
+                  <img src="./assets/img/icon-content-black.svg" alt="content marketing icon" />
                 </div>
               </div>
               <div className="text-center">
@@ -51,10 +51,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-mobile-white.svg" alt="Mobile Application icon" />
+                  <img src="./assets/img/icon-mobile-white.svg" alt="Mobile Application icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-mobile-black.svg" alt="Mobile Application icon" />
+                  <img src="./assets/img/icon-mobile-black.svg" alt="Mobile Application icon" />
                 </div>
               </div>
               <div className="text-center">
@@ -69,10 +69,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-email-white.svg" alt="Email Marketing icon" />
+                  <img src="./assets/img/icon-email-white.svg" alt="Email Marketing icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-email-black.svg" alt="Email Marketing icon" />
+                  <img src="./assets/img/icon-email-black.svg" alt="Email Marketing icon" />
                 </div>
               </div>
               <div className="text-center">
@@ -87,10 +87,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-design-white.svg" alt="Theme Design icon" />
+                  <img src="./assets/img/icon-design-white.svg" alt="Theme Design icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-design-black.svg" alt="Theme Design icon" />
+                  <img src="./assets/img/icon-design-black.svg" alt="Theme Design icon" />
                 </div>
               </div>
               <div className="text-center">
@@ -105,10 +105,10 @@ const Services = () => {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img src="/assets/img/icon-graphics-white.svg" alt="Graphic Design icon" />
+                  <img src="./assets/img/icon-graphics-white.svg" alt="Graphic Design icon" />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img src="/assets/img/icon-graphics-black.svg" alt="Graphic Design icon" />
+                  <img src="./assets/img/icon-graphics-black.svg" alt="Graphic Design icon" />
                 </div>
               </div>
               <div className="text-center">
