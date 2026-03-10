@@ -1,5 +1,5 @@
 import router from 'express';
-import { createPersonalInfo, getAllPersonalInfo } from '../controllers/personalinfo.controller';
+import { createPersonalInfo, getPersonalInfoById, getAllPersonalInfo, patchPersonalInfo, deletePersonalInfo } from '../controllers/personalinfo.controller';
 
 const personalInfoRouter = router.Router();
 
@@ -108,9 +108,115 @@ const personalInfoRouter = router.Router();
  *                     format: date-time
  *       500:
  *         description: Server error
+ * /api/personalinfo/{id}:
+ *   get:
+ *     summary: Get personal information by ID
+ *     tags:
+ *       - Personal Info
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: Personal information ID
+ *     responses:
+ *       200:
+ *         description: Personal information retrieved successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 _id:
+ *                   type: string
+ *                 fname:
+ *                   type: string
+ *                 lname:
+ *                   type: string
+ *                 mname:
+ *                   type: string
+ *                 email:
+ *                   type: string
+ *                 phone:
+ *                   type: string
+ *                 address:
+ *                   type: string
+ *                 createdAt:
+ *                   type: string
+ *                   format: date-time
+ *                 updatedAt:
+ *                   type: string
+ *                   format: date-time
+ *       404:
+ *         description: Personal information not found
+ *       500:
+ *         description: Server error
+ *   patch:
+ *     summary: Update personal information by ID
+ *     tags:
+ *       - Personal Info
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: Personal information ID
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               fname:
+ *                 type: string
+ *               lname:
+ *                 type: string
+ *               mname:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               phone:
+ *                 type: string
+ *               address:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Personal information updated successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *       404:
+ *         description: Personal information not found
+ *       500:
+ *         description: Server error
+ *   delete:
+ *     summary: Soft delete personal information by ID
+ *     tags:
+ *       - Personal Info
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: Personal information ID
+ *     responses:
+ *       200:
+ *         description: Entry soft-deleted successfully
+ *       404:
+ *         description: Personal information not found or already deleted
+ *       500:
+ *         description: Server error
  */
 
 personalInfoRouter.post('/', createPersonalInfo);
+personalInfoRouter.get('/:id', getPersonalInfoById);
 personalInfoRouter.get('/', getAllPersonalInfo);
+personalInfoRouter.patch('/:id', patchPersonalInfo);
+personalInfoRouter.delete('/:id', deletePersonalInfo);
 
 export default personalInfoRouter;
