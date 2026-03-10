@@ -4,7 +4,7 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Personal Info API',
+      title: 'Lenyang Landing Page API',
       version: '1.0.0',
       description: 'API for managing personal information',
     },

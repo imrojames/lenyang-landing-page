@@ -1,14 +1,49 @@
 
+import { useEffect, useState } from 'react';
+import { getPersonalInfo } from '../services/personalInfo';
+import type { PersonalInfo } from '../services/personalInfo';
+
 interface IHomeProps {
     name?: string;
     profileImage?: string;
     backgroundImage?: string;
 }
-const Home = ({ name, profileImage, backgroundImage }: IHomeProps) => {
+
+const Home = ({ name: propName, profileImage: propProfileImage, backgroundImage: propBackgroundImage }: IHomeProps) => {
+    const [personalInfo, setPersonalInfo] = useState<PersonalInfo | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchPersonalInfo = async () => {
+            try {
+                setLoading(true);
+                const data = await getPersonalInfo();
+                setPersonalInfo(data);
+                setError(null);
+            } catch (error) {
+                console.error('Failed to fetch personal info:', error);
+                setError('Failed to load personal information');
+                setLoading(false);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPersonalInfo();
+    }, []);
+
+    // Use API data if available, otherwise fall back to props
+    const name = personalInfo?.fname || propName || 'User';
+
+    if (loading) {
+        return <div className="flex items-center justify-center py-16">Loading...</div>;
+    }
+
     return (
       <>
        <div className="relative bg-cover bg-center bg-no-repeat py-8"
-          style={{ backgroundImage: `url(${backgroundImage})` }}>
+          style={{ backgroundImage: `url(${propBackgroundImage})` }}>
           <div
             className="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat">
           </div>
@@ -16,7 +51,7 @@ const Home = ({ name, profileImage, backgroundImage }: IHomeProps) => {
           <div className="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
-                <img src={profileImage || "/assets/img/blog-author.jpg"} className="h-48 rounded-full sm:h-56" alt="author" />
+                <img src={propProfileImage || "/assets/img/blog-author.jpg"} className="h-48 rounded-full sm:h-56" alt="author" />
               </div>
               <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
@@ -145,7 +180,7 @@ const Home = ({ name, profileImage, backgroundImage }: IHomeProps) => {
         </div>
         {/* End of About */}
       </>
-    )
-}
+    );
+};
 
 export default Home;
