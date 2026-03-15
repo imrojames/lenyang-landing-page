@@ -2,7 +2,7 @@ import Portfolio, {IPorfolios} from "../models/Portfolio";
 
 // Create a new portfolio entry
 export const createPortfolio = async (data: Partial<IPorfolios>): Promise<IPorfolios> => {
-    const newPortfolio = new Portfolio({ data });
+    const newPortfolio = new Portfolio(data);
     return newPortfolio.save();
 }
 

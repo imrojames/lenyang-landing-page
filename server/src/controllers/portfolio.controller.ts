@@ -5,9 +5,9 @@ import * as PortfolioService from '../services/portfolio.service';
 export const createPortfolio = async (req: typeof request, res: typeof response): Promise<void> => {
     try {
         const savedPortfolio = await PortfolioService.createPortfolio(req.body);
-        res.status(201).json(savedPortfolio);
+        res.status(201).json({ message: "Porfolio created successfully", data: savedPortfolio });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to create portfolio' });
+        res.status(500).json({ error: (error as Error).message });
     }
 }
 
